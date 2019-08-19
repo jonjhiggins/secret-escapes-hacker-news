@@ -1,5 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export default function Stories() {
-  return <div className="stories" />;
+import Story from "../Story";
+import "./index.css";
+
+export default function Stories({ stories }) {
+  return (
+    <div className="stories">
+      {" "}
+      {stories.map((story, index) => (
+        <Story story={story} key={index} />
+      ))}
+    </div>
+  );
 }

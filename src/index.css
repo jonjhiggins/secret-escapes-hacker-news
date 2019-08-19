@@ -1,6 +1,28 @@
 :root {
-  --brand-color: #ff6600;
-  --link-color: #bb4b00; /* contrast ratio on white 4.70 */ 
+  --brand-color: #e67e22;
+  --link-color: #bb4b00;  /* contrast ratio on white 4.70 */
+  --grey-text-color: #666;
+  --text-color: #2c3e50;
+  --card-bg-color: #ecf0f1;
+  --padding: 8px;
+  --font-size-1: calc(8 * 5px);
+  --font-size-2: calc(8 * 3px);
+  --font-size-3: calc(8 * 2px);
+  --font-size-4: calc(8 * 1.5px);
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    --padding: 16px;
+    --font-size-1: calc(8 * 6px);
+    --font-size-2: calc(8 * 4px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --padding: 24px;
+  }
 }
 
 body {
@@ -10,6 +32,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
 }
 
 code {
@@ -21,3 +44,7 @@ a {
   color: var(--link-color);
 }
 
+p {
+  margin: 0 0 var(--padding);
+  line-height: 1.5;
+}

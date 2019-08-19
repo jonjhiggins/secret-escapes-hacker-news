@@ -1,23 +1,29 @@
 .header {
-    padding: 16px;
-    background-color: var(--brand-color);
+  padding: var(--padding);
+  background-color: var(--brand-color);
 }
 
 .header h1 {
-    margin: 0 0 16px;
+  margin: 0 0 var(--padding);
+  font-size: var(--font-size-1);
+  background-color: #fff;
+  display: inline-block;
+  padding: var(--padding);
 }
 
 .header a {
-    color: #000; /* contrast ratio 7.15 */
+  color: var(--text-color);
 }
 
 .header ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  background-color: #fff;
+  display: inline-flex;
+  padding: var(--padding);
+  flex-wrap: wrap;
 }
 
 .header li:not(:last-child) {
-    margin-right: 16px;
+  margin-right: var(--padding);
 }

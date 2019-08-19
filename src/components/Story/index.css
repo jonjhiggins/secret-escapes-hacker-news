@@ -1,0 +1,78 @@
+.story {
+  padding: var(--padding);
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--card-bg-color);
+  margin: 0 0 var(--padding);
+}
+
+.story-title {
+  margin: 0;
+  font-size: var(--font-size-2);
+  font-weight: bold;
+}
+
+.story-author {
+  color: var(--grey-text-color); /* contrast ratio 5.0 on --card-bg-color */
+  margin-bottom: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.story-extra {
+  order: -1;
+  margin-right: var(--padding);
+  text-align: center;
+  border: 1px solid #ccc; 
+}
+
+.story-upvote {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.story-upvote-arrow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background: #000000;
+  display: block;
+}
+.story-upvote-arrow::after,
+.story-upvote-arrow::before {
+  top: 0;
+  left: 0;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #000000;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.story-upvote-text {
+  /* start visually-hidden (move to mixin) */
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* end visually-hidden */
+}
+
+.story-score {
+  font-size: var(--font-size-4);
+  margin-top: -12px;
+}

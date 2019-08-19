@@ -10,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <Header links={linksData} title={appData.appNameFriendly} />
-      <Stories stories={storiesData} />
+      <main role="main">
+        <Stories stories={storiesData} />
+      </main>
     </div>
   );
 }
