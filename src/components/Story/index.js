@@ -30,6 +30,7 @@ export default function Story({ story, setActiveStory, active, index }) {
   return (
     <article
       className={`story ${active ? "is-active" : ""}`}
+      style={{animation: `fadeIn 400ms ease-in ${110 * index}ms forwards`}}
       role="button"
       onClick={() => setActiveStory(index)}
       onKeyDown={handleKeyDown}
