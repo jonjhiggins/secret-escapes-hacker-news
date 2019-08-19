@@ -22,8 +22,8 @@ Small rework of Hacker News homepage, built with [Create React App](https://gith
 
 ## Browser support
 
-TBC
+Chrome, Safari, Firefox latest
 
 ## Continous integration
 
-TBC
+Builds to https://secret-escapes-hacker-news.netlify.com/ on pushing to `master`
