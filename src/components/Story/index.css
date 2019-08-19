@@ -3,7 +3,6 @@
   display: flex;
   align-items: flex-start;
   background-color: var(--card-bg-color);
-  margin: 0 0 var(--padding);
 }
 
 .story-title {
@@ -14,8 +13,7 @@
 
 .story-author {
   color: var(--grey-text-color); /* contrast ratio 5.0 on --card-bg-color */
-  margin-bottom: var(--padding);
-  padding-bottom: var(--padding);
+  margin-bottom: 16px;
 }
 
 .story-extra {

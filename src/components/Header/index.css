@@ -20,7 +20,7 @@
   margin: 0;
   background-color: #fff;
   display: inline-flex;
-  padding: var(--padding);
+  padding: 8px;
   flex-wrap: wrap;
 }
 
