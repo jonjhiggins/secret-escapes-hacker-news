@@ -18,9 +18,6 @@
 
 .story-extra {
   order: -1;
-  margin-right: var(--padding);
-  text-align: center;
-  border: 1px solid #ccc; 
 }
 
 .story-upvote {
@@ -36,7 +33,7 @@
 .story-upvote-arrow {
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 0;
   background: #000000;
   display: block;
 }
@@ -53,7 +50,6 @@
   border-color: rgba(0, 0, 0, 0);
   border-bottom-color: #000000;
   border-width: 8px;
-  margin-left: -8px;
 }
 
 .story-upvote-text {
@@ -73,4 +69,19 @@
 .story-score {
   font-size: var(--font-size-4);
   margin-top: -12px;
+}
+
+/** STATES **/
+
+/* active */
+.story.is-active {
+  background-color: rgba(230, 126, 34, 0.2);
+}
+
+@media screen and (min-width: 524px) {
+  /* point at which 2 grid cols visible */
+  .story.is-active {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
 }
