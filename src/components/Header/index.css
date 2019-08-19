@@ -9,6 +9,7 @@
   background-color: #fff;
   display: inline-block;
   padding: var(--padding);
+  box-shadow: 8px 8px 0;
 }
 
 .header a {

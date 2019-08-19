@@ -16,7 +16,10 @@ export default function Story({ story, setActiveStory, active, index }) {
   /**
    * @TODO upvote functionality
    */
-  const upvote = () => alert("Upvote");
+  const upvote = e => {
+    e.stopPropagation();
+    alert("Upvote");
+  };
 
   /**
    * Only set active story on hitting enter when using keyboard nav
@@ -24,17 +27,19 @@ export default function Story({ story, setActiveStory, active, index }) {
    */
   const handleKeyDown = event => event.keyCode !== 13 || setActiveStory(index);
   return (
-    <article className={`story ${active ? "is-active" : ""}`}>
-      <div
-        className="story-main"
-        role="button"
-        onClick={() => setActiveStory(index)}
-        onKeyDown={handleKeyDown}
-        tabIndex="0"
-      >
+    <article
+      className={`story ${active ? "is-active" : ""}`}
+      role="button"
+      onClick={() => setActiveStory(index)}
+      onKeyDown={handleKeyDown}
+      tabIndex="0"
+    >
+      <div className="story-main">
         <h2 className="story-title">{title}</h2>
         <p className="story-author">{author}</p>
-        <div dangerouslySetInnerHTML={{ __html: active ? text : getExcept(text) }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: active ? text : getExcept(text) }}
+        />
       </div>
       <div className="story-extra">
         <button type="button" className="story-upvote" onClick={upvote}>
