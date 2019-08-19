@@ -9,7 +9,13 @@
   background-color: #fff;
   display: inline-block;
   padding: var(--padding);
-  box-shadow: 8px 8px 0;
+  box-shadow: 4px 4px 0;
+}
+
+@media screen and (min-width: 800px) {
+  .header h1 {
+    box-shadow: 8px 8px;
+  }
 }
 
 .header a {

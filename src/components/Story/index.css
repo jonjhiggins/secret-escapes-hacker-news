@@ -3,7 +3,19 @@
   display: flex;
   align-items: flex-start;
   background-color: var(--card-bg-color);
-  box-shadow: 8px 8px 0 rgb(212, 217, 218);
+  box-shadow: 4px 4px 0 rgb(212, 217, 218);
+  transition: background-color 400ms ease;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .story {
+    box-shadow: 8px 8px 0 rgb(212, 217, 218);
+  }
+}
+
+.story:hover {
+  background-color: rgba(230, 126, 34, 0.2);
 }
 
 .story-title {

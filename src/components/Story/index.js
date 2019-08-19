@@ -9,9 +9,10 @@ export default function Story({ story, setActiveStory, active, index }) {
    * Return a short excerpt from the article content
    * Regex from https://stackoverflow.com/a/5454297
    * @TODO escape the text to avoid XSS attack
-   * @param {string} text
+   * @param {string|undefined} text
    */
-  const getExcept = text => `${text.replace(/^(.{200}[^\s]*).*/, "$1")}...`;
+  const getExcept = text =>
+    text ? `${text.replace(/^(.{200}[^\s]*).*/, "$1")}...` : "";
 
   /**
    * @TODO upvote functionality

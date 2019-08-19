@@ -4,3 +4,20 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: var(--padding);
 }
+
+.stories-loading {
+  min-height: 300px;
+  display: flex;
+  flex: 1 0 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-2);
+}
+
+/** STATES **/
+
+/* loading */
+
+.stories.is-loading {
+  display: block;
+}

@@ -19,8 +19,8 @@ export default function Stories({ stories }) {
   };
 
   return (
-    <div className="stories">
-      {" "}
+    <div className={`stories ${!stories.length ? "is-loading" : ""}`}>
+      {!stories.length && <div className="stories-loading">Loading...</div>}
       {stories.map((story, index) => (
         <Story
           story={story}
